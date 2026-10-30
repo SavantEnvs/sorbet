@@ -1,0 +1,10 @@
+project: savantenvs/sorbet
+target: fuzz_doc_symbols
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_doc_symbols/testsuite
+dictionary: /mayhem/mayhem/fuzz_doc_symbols/fuzz_doc_symbols.dict
+cmds:
+  - cmd: /mayhem/fuzz_doc_symbols
+    libfuzzer: true
+    timeout: 60

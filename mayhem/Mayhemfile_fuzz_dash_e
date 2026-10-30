@@ -1,0 +1,10 @@
+project: savantenvs/sorbet
+target: fuzz_dash_e
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dash_e/testsuite
+dictionary: /mayhem/mayhem/fuzz_dash_e/fuzz_dash_e.dict
+cmds:
+  - cmd: /mayhem/fuzz_dash_e
+    libfuzzer: true
+    timeout: 60
